@@ -1,0 +1,166 @@
+\documentclass{article} % use larger type; default would be 10pt
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{ucs}
+\usepackage[a4paper,left=2.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\righthyphenmin=2
+\selectlanguage{russian}
+\begin{document}
+{\Large
+
+\noindent
+Рассмотрим опреацию поворота, то есть геометрическое произведение бивектора $\vec{a}\vec{b}$, вектора $\vec{v}$ и бивектора $\vec{b}\vec{a}$:
+
+\hfill
+
+$\vec{u} = \vec{b}\vec{a}\, \vec{v}\, \vec{a}\vec{b}$, где $\vec{u}$ -- вектор, повёрнутый с помощью ротора (бивектора) $\vec{a}\vec{b}$
+
+\hfill
+
+\noindent
+Сначала распишем правую часть:
+
+\hfill
+
+$q = \vec{v}\, \vec{a}\vec{b} =$
+
+$(v_x \vec{x} + v_y \vec{y} +  v_z \vec{z}) (\alpha + \beta_{01} \vec{x} \vec{y} + \beta_{02}\vec{x} \vec{z} + \beta_{12} \vec{y} \vec{z}) = $
+
+\hfill
+
+$\alpha v_x \vec{x} + \alpha v_y \vec{y} + \alpha v_z \vec{z} +$
+
+$\beta_{01} v_x \vec{x}\vec{x}\vec{y} + \beta_{01} v_y \vec{y}\vec{x}\vec{y} + \beta_{01} v_z \vec{z}\vec{x}\vec{y} +$
+
+$\beta_{02} v_x \vec{x}\vec{x}\vec{z} + \beta_{02} v_y \vec{y}\vec{x}\vec{z} + \beta_{02} v_z \vec{z}\vec{x}\vec{z} +$
+
+$\beta_{12} v_x \vec{x}\vec{y}\vec{z} + \beta_{12} v_y \vec{y}\vec{y}\vec{z} + \beta_{12} v_z \vec{z}\vec{y}\vec{z} =$
+
+\hfill
+
+$\alpha v_x \vec{x} + \alpha v_y \vec{y} + \alpha v_z \vec{z} +$
+
+$\beta_{01} v_x \vec{y} - \beta_{01} v_y \vec{x} + \beta_{01} v_z \vec{x}\vec{y}\vec{z} +$
+
+$\beta_{02} v_x \vec{z} - \beta_{02} v_y \vec{x}\vec{y}\vec{z} - \beta_{02} v_z \vec{x} +$
+
+$\beta_{12} v_x \vec{x}\vec{y}\vec{z} + \beta_{12} v_y \vec{z} - \beta_{12} v_z \vec{y} =$
+
+\hfill
+
+$(\alpha v_x - \beta_{01} v_y - \beta_{02} v_z)\vec{x} +$
+
+$(\alpha v_y + \beta_{01} v_x - \beta_{12} v_z) \vec{y} +$
+
+$(\alpha v_z + \beta_{02} v_x + \beta_{12} v_y) \vec{z} +$
+
+$(\beta_{01} v_z - \beta_{02} v_y + \beta_{12} v_x) \vec{x}\vec{y}\vec{z} = $
+
+\hfill
+
+$q_x \vec{x} + q_y \vec{y} + q_z \vec{z} +q_{xyz} \vec{x}\vec{y}\vec{z} = q_x \vec{x} + q_y \vec{y} + q_z \vec{z} +q_{012} \vec{x}\vec{y}\vec{z}$
+
+\newpage
+
+\noindent
+Теперь рассмотрим левую часть. По определению внешнего произведения бивекторная составляющая $\vec{b}\vec{a}$ равна бивекторной составляющей $\vec{a}\vec{b}$, взятой с обратным знаком, а по определению внутреннего произведения их скалярные составляющие равны, тогда:
+
+\hfill
+
+$\vec{u} = \vec{b}\vec{a}\, q =$
+
+$(\alpha - \beta_{01} \vec{x} \vec{y} - \beta_{02}\vec{x} \vec{z} - \beta_{12} \vec{y} \vec{z}) (q_x \vec{x} + q_y \vec{y} + q_z \vec{z} + q_{012} \vec{x}\vec{y}\vec{z}) =$
+
+\hfill
+
+$\alpha q_x \vec{x} + \alpha q_y \vec{y} + \alpha q_z \vec{z} + \alpha q_{012} \vec{x}\vec{y}\vec{z}$
+
+$- \beta_{01} q_x \vec{x} \vec{y} \vec{x} - \beta_{01} q_y \vec{x} \vec{y} \vec{y} - \beta_{01} q_z \vec{x} \vec{y} \vec{z}- \beta_{01} q_{012} \vec{x} \vec{y} \vec{x}\vec{y}\vec{z}$
+
+$- \beta_{02} q_x \vec{x} \vec{z} \vec{x} - \beta_{02} q_y \vec{x} \vec{z} \vec{y} - \beta_{02} q_z \vec{x} \vec{z} \vec{z}- \beta_{02} q_{012} \vec{x} \vec{z} \vec{x}\vec{y}\vec{z}$
+
+$- \beta_{12} q_x \vec{y} \vec{z} \vec{x} - \beta_{12} q_y \vec{y} \vec{z} \vec{y} - \beta_{12} q_z \vec{y} \vec{z} \vec{z}- \beta_{12} q_{012} \vec{y} \vec{z} \vec{x}\vec{y}\vec{z} =$
+
+\hfill
+
+$\alpha q_x \vec{x} + \alpha q_y \vec{y} + \alpha q_z \vec{z} + \alpha q_{012} \vec{x}\vec{y}\vec{z} +$
+
+$\beta_{01} q_x \vec{y} - \beta_{01} q_y \vec{x} - \beta_{01} q_z \vec{x} \vec{y} \vec{z} + \beta_{01} q_{012} \vec{z} +$
+
+$\beta_{02} q_x \vec{z} + \beta_{02} q_y \vec{x}  \vec{y} \vec{z} - \beta_{02} q_z \vec{x} - \beta_{02} q_{012} \vec{y}$
+
+$- \beta_{12} q_x \vec{x} \vec{y} \vec{z} + \beta_{12} q_y \vec{z} - \beta_{12} q_z \vec{y} + \beta_{12} q_{012} \vec{x} =$
+
+\hfill
+
+$(\alpha q_x - \beta_{01} q_y - \beta_{02} q_z + \beta_{12} q_{012}) \vec{x} +$
+
+$(\alpha q_y + \beta_{01} q_x - \beta_{02} q_{012} - \beta_{12} q_z) \vec{y} +$
+
+$(\alpha q_z + \beta_{01} q_{012} + \beta_{02} q_x + \beta_{12} q_y) \vec{z} +$
+
+$(\alpha q_{012} - \beta_{01} q_z + \beta_{02} q_y - \beta_{12} q_x) \vec{x}\vec{y}\vec{z}$
+
+\hfill
+
+\noindent
+Заметим, что бивекторная часть отсутствует.
+
+\hfill
+
+\noindent
+Подставим значения из $\mathbf q$ в последий полученный тривектор:
+
+$(\alpha q_{012} - \beta_{01} q_z + \beta_{02} q_y - \beta_{12} q_x) \vec{x}\vec{y}\vec{z} =$
+
+\hfill
+
+$(\alpha (\beta_{01} v_z - \beta_{02} v_y + \beta_{12} v_x)$
+
+$- \beta_{01} (\alpha v_z + \beta_{02} v_x + \beta_{12} v_y) +$
+
+$\beta_{02} (\alpha v_y + \beta_{01} v_x - \beta_{12} v_z)$
+
+$- \beta_{12} (\alpha v_x - \beta_{01} v_y - \beta_{02} v_z)) \vec{x}\vec{y}\vec{z} =$
+
+\hfill
+
+$\alpha \beta_{01} v_z - \alpha \beta_{02} v_y + \alpha \beta_{12} v_x$
+
+$- \beta_{01} \alpha v_z - \beta_{01} \beta_{02} v_x - \beta_{01} \beta_{12} v_y +$
+
+$\beta_{02} \alpha v_y + \beta_{02} \beta_{01} v_x - \beta_{02} \beta_{12} v_z$
+
+$- \beta_{12} \alpha v_x + \beta_{12} \beta_{01} v_y + \beta_{12} \beta_{02} v_z)) \vec{x}\vec{y}\vec{z} =$
+
+\hfill
+
+$(\alpha \beta_{01} v_z - \beta_{01} \alpha v_z) + (- \alpha \beta_{02} v_y + \beta_{02} \alpha v_y) +$
+
+$(\alpha \beta_{12} v_x - \beta_{12} \alpha v_x) + (- \beta_{01} \beta_{02} v_x + \beta_{02} \beta_{01} v_x)$
+
+$(- \beta_{01} \beta_{12} v_y + \beta_{12} \beta_{01} v_y) + (- \beta_{02} \beta_{12} v_z + \beta_{12} \beta_{02} v_z)) \vec{x}\vec{y}\vec{z} = 0$
+
+\hfill
+
+\noindent
+Следовательно тривекторная часть опреации $\vec{b}\vec{a}\, \vec{v}\, \vec{a}\vec{b}$ равно нулю.
+
+\hfill
+
+\noindent
+Таким образом, получим окончательное значение вектора, к которому была применена операция поворота:
+
+\hfill
+
+$\vec{u} = \vec{b}\vec{a}\, \vec{v}\, \vec{a}\vec{b} =$
+
+$(\alpha q_x - \beta_{01} q_y - \beta_{02} q_z + \beta_{12} q_{012}) \vec{x} +$
+
+$(\alpha q_y + \beta_{01} q_x - \beta_{02} q_{012} - \beta_{12} q_z) \vec{y} +$
+
+$(\alpha q_z + \beta_{01} q_{012} + \beta_{02} q_x + \beta_{12} q_y) \vec{z}$
+
+}
+\end{document}
