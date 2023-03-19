@@ -1,0 +1,7 @@
+old/
+__pycache__/
+venv/
+.idea/
+build*
+*.pro
+*.user
