@@ -20,11 +20,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_load_model_clicked();
 
-    void on_scale_plus_clicked();
+    void on_scale_up_clicked();
 
-    void on_scale_minus_clicked();
+    void on_scale_down_clicked();
 
     void on_move_up_clicked();
 

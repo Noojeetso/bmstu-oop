@@ -33,7 +33,7 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_load_model_clicked()
 {
     ret_code_t rc;
     vector3_t rotation = {0, 0, 0};
@@ -75,7 +75,7 @@ void MainWindow::on_pushButton_clicked()
         handle_error(rc);
 }
 
-void MainWindow::on_scale_plus_clicked()
+void MainWindow::on_scale_up_clicked()
 {
     ret_code_t rc;
     request_t request = { .code = SCALE_MODEL,
@@ -97,7 +97,7 @@ void MainWindow::on_scale_plus_clicked()
 }
 
 
-void MainWindow::on_scale_minus_clicked()
+void MainWindow::on_scale_down_clicked()
 {
     ret_code_t rc;
     request_t request = { .code = SCALE_MODEL,
@@ -354,4 +354,3 @@ void MainWindow::on_rotate_down_z_clicked()
     if (rc != EXIT_OK)
         handle_error(rc);
 }
-
