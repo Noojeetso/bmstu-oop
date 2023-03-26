@@ -15,7 +15,6 @@ ret_code_t file_open_read(FILE **file, const char *filename)
     *file = fopen(filename, READ_MODE);
     if (*file == NULL)
     {
-        perror(NULL);
         return ERR_FILE_OPEN;
     }
 
@@ -25,6 +24,11 @@ ret_code_t file_open_read(FILE **file, const char *filename)
 ret_code_t file_close(FILE *file)
 {
     int rc;
+
+    if (file == NULL)
+    {
+        return ERR_NULL_PTR;
+    }
 
     rc = fclose(file);
     if (rc != EXIT_SUCCESS)
